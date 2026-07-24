@@ -1,0 +1,20 @@
+# Build output
+target/
+*.class
+*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+out/
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+*.pem
+
+# Large data
+dataset/raw/

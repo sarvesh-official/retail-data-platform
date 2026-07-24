@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    log4j2.xml — logging configuration.
+
+    Flink uses Log4j2 internally. This config is used when running the jar
+    locally (java -jar). When submitted to a Flink cluster, the cluster's
+    own log4j2 config takes precedence.
+
+    Levels:
+      INFO  — general flow (job started, source opened, finished)
+      WARN  — dropped records, recoverable issues
+      ERROR — failures that need attention
+-->
+<Configuration status="INFO">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level [%thread] %logger{36} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
