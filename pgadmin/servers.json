@@ -1,0 +1,13 @@
+{
+  "Servers": {
+    "1": {
+      "Name": "Retail PostgreSQL",
+      "Group": "Servers",
+      "Host": "postgres",
+      "Port": 5432,
+      "MaintenanceDB": "retaildb",
+      "Username": "retailuser",
+      "SSLMode": "prefer"
+    }
+  }
+}
