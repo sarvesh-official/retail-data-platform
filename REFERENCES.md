@@ -6,7 +6,7 @@ Documentation, articles, and resources used while building this pipeline.
 
 ### Official Documentation
 - **Project Configuration (Maven setup, dependency scopes, fat jar packaging)**
-  https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/dev/datastream/project-configuration/
+  https://nightlies.apache.org/flink/flink-docs-release-1.14/docs/dev/datastream/project-configuration/
   Used for: `pom.xml` structure, `provided` vs `compile` scope for Flink deps, `maven-shade-plugin` configuration, signature file filtering.
 
 - **DataStream API — Sources**
@@ -22,7 +22,7 @@ Documentation, articles, and resources used while building this pipeline.
   Used for: `JdbcSink.sink()`, `JdbcExecutionOptions` (batching, retries), `JdbcConnectionOptions`.
 
 - **Execution Configuration (parallelism, checkpointing)**
-  https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/dev/datastream/execution/execution_config/
+  https://nightlies.apache.org/flink/flink-docs-stable/docs/dev/datastream/execution/execution_configuration/
   Used for: `env.setParallelism()`, understanding operator chaining.
 
 - **Flink Docker images (Java 17 tag)**
@@ -31,18 +31,20 @@ Documentation, articles, and resources used while building this pipeline.
 
 ### Articles / Blog Posts
 - **Apache Flink: Java Version Support Matrix**
-  https://nightlies.apache.org/flink/flink-docs-release-1.20/docs/try-flink/installing_flink/#java-version
+  https://nightlies.apache.org/flink/flink-docs-stable/docs/deployment/java_compatibility/
   Used for: verifying Java 17 is supported in Flink 1.20 (it is, officially).
 
 ## MinIO
 
 ### Official Documentation
 - **MinIO Java SDK — GetObject**
-  https://min.io/docs/minio/linux/developers/java/minio-java.html#read-and-write-objects
+  https://docs.min.io/aistor/developers/sdk/java/
+  Javadoc: https://minio-java.min.io/io/minio/GetObjectResponse.html
   Used for: `MinioClient.builder()`, `GetObjectArgs`, reading an object as an `InputStream`.
 
 - **MinIO Client (mc) — bucket operations**
-  https://min.io/docs/minio/linux/reference/minio-mc.html
+  https://docs.min.io/aistor/reference/cli/
+  Quick Reference: https://docs.min.io/aistor/reference/cli/command-quick-reference/
   Used for: the `create-bucket` sidecar in `docker-compose.yml` (`mc mb`, `mc cp`).
 
 ## PostgreSQL
